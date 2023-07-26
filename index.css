@@ -5,10 +5,20 @@ body {
     font-weight: bold;
     color: white;
     text-align: center;
+
+    //refined some css;
+    min-height: 100vh;
+    font-size: 1.5rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
 }
 
 h1 {
     color: goldenrod;
+    font-size: 3.5rem;
 }
 
 #message-el {
