@@ -1,6 +1,8 @@
+var playerName = prompt("नाम बता जुआरी!");
+
 let player = {
-    name: "Per",
-    chips: 200
+    name: playerName,
+    chips: 0
 }
 
 let cards = []
@@ -14,6 +16,9 @@ let cardsEl = document.getElementById("cards-el")
 let playerEl = document.getElementById("player-el")
 
 playerEl.textContent = player.name + ": $" + player.chips
+
+
+
 
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*13 ) + 1
@@ -62,4 +67,11 @@ function newCard() {
         cards.push(card)
         renderGame()        
     }
+
+    if(hasBlackJack === true){
+        playerEl.textContent = player.name + ": $" + 1000
+    } else {
+        playerEl.textContent = player.name + ": $" + player.chips
+    }
 }
+
